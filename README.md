@@ -1,5 +1,5 @@
 # Individual Project
-![EV Charging Station](ev_image.jpeg)
+![EV Charging Station](https://i.insider.com/6042a8ac44d8e300117b9655?width=1200&format=jpeg)
 
 # Current State of the Electric Vehicle (EV) Charging Network within the United States
 By Jeff Akins

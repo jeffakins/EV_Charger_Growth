@@ -11,6 +11,11 @@ The goal of this project is to examine the current state of the EV charging netw
 ## Executive Summary
 
 ## How to Reproduce:
+- You will need a copy of the 'alternative fuel stations 2021 csv' file, which can be downloaded from data.gov [here](https://catalog.data.gov/dataset/alternative-fueling-station-locations-422f2/resource/341957d8-daf6-4a38-ab1d-8ec1bc21cfb9)
+- Clone my github repo
+- Run the 'individual_prject' notebook
+- Enjoy!
+
 
 ## Pipeline 
 

@@ -46,25 +46,26 @@ Here is a summary of the data after I completed the cleaning process:
 #### Data dictionary
 |Index | Column Name | Description | Row Count | Dtype|
 |---|---|---|---|---|
-| 0  | fuel_code         | Type of Fuel i.e. 'Electric'                         | 47006 non-null | object       |
-| 1  | station_name      | Name of station                                      | 47006 non-null | object       |
-| 2  | address           | Address                                              | 47006 non-null | object       |
-| 3  | city              | City                                                 | 47006 non-null | object       |
-| 4  | state             | State                                                | 47006 non-null | object       |
-| 5  | zip               | Zip Code                                             | 47006 non-null | object       |
-| 6  | group_access_code | Whether public or private                            | 47006 non-null | object       |
-| 7  | level1_evse_num   | Count of level 1 chargers                            | 47006 non-null | int64        |
-| 8  | level2_evse_num   | Count of level 2 chargers                            | 47006 non-null | int64        |
-| 9  | ev_dc_fast_count  | Count of DC fast chargers                            | 47006 non-null | int64        |
-| 10 | ev_network        | Whether the charging stations is part of a network   | 47006 non-null | object       |
-| 11 | lat               | Latitude location                                    | 47006 non-null | float64      |
-| 12 | long              | Longitude location                                   | 47006 non-null | float64      |
-| 13 | update_date       | Date stations information was updated                | 47006 non-null | datetime64   |
-| 14 | open_date         | Date station was opened                              | 47006 non-null | datetime64   |
-| 15 | connector_type    | Type of charging connector                           | 47006 non-null | object       |
-| 16 | pricing           | Whether Free or Costs to charge                      | 47006 non-null | object       |
-| 17 | year_opened       | Year the station opened                              | 47006 non-null | int64        |
-
+| 0  | fuel_code              | Type of Fuel i.e. 'Electric'                         | 47006 non-null | object     |
+| 1  | station_name           | Name of station                                      | 47006 non-null | object     |
+| 2  | address                | Address                                              | 47006 non-null | object     |
+| 3  | city                   | City                                                 | 47006 non-null | object     |
+| 4  | state                  | State                                                | 47006 non-null | object     |
+| 5  | zip                    | Zip Code                                             | 47006 non-null | object     |
+| 6  | group_access_code      | Whether public or private                            | 47006 non-null | object     |
+| 7  | level1_evse_num        | Count of level 1 chargers                            | 47006 non-null | int64      |
+| 8  | level2_evse_num        | Count of level 2 chargers                            | 47006 non-null | int64      |
+| 9  | ev_dc_fast_count       | Count of DC fast chargers                            | 47006 non-null | int64      |
+| 10 | ev_network             | Whether the charging stations is part of a network   | 47006 non-null | object     |
+| 11 | lat                    | Latitude location                                    | 47006 non-null | float64    |
+| 12 | long                   | Longitude location                                   | 47006 non-null | float64    |
+| 13 | update_date            | Date stations information was updated                | 47006 non-null | datetime64 |
+| 14 | open_date              | Date station was opened                              | 47006 non-null | datetime64 |
+| 15 | connector_type         | Type of charging connector                           | 47006 non-null | object     |
+| 16 | pricing                | Whether Free or Costs to charge                      | 47006 non-null | object     |
+| 17 | year_opened            | Year the station opened                              | 47006 non-null | int64      |
+| 18 | total_chargers         | Sum of all chargers per location                     | 47006 non-null | int64      |
+| 19 | rolling_total_chargers | A rolling sum by open date of new chargers           | 47006 non-null | int64      |
 
 ### Explore:
 

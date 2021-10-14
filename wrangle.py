@@ -113,4 +113,15 @@ def clean_ev(csv_file_name):
     ev_21 = ev_21[ev_21.group_access_code != 'PLANNED - not yet accessible (Public - Call ahead)']
     ev_21 = ev_21[ev_21.group_access_code != 'PLANNED - not yet accessible (Private)']
 
+    # Create a total number chargers column:
+    ev_21['total_chargers'] = ev_21.level1_evse_num + ev_21.level2_evse_num + ev_21.ev_dc_fast_count    
+
+    # Sort values by open date
+    ev_21 = ev_21.sort_values('open_date')
+    # Reset Index
+    ev_21 = ev_21.reset_index(drop=True)
+
+    # Now we can create a column that sums the previous rows using cumsum:
+    ev_21['rolling_total_chargers'] = ev_21.total_chargers.cumsum()
+
     return ev_21

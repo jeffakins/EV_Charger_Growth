@@ -17,7 +17,6 @@ Based on the past rate of adding new EV charging stations within the US, and uti
 
 
 ## Pipeline 
-
 ### Plan:
 [Trello Board](https://trello.com/b/nCuPtuTu/individual-project-plan)
 
@@ -77,8 +76,8 @@ Due to the upward trend of the dataset over time I chose to use the Holt model a
 |Model| RMSE|
 |---|---|
 |Holt | 1010 |
-
 |Holt-Winters Exponential Smoothing | 898 |
+
 I achieved these results by adjusting the α and β smoothing parameters in order to optimally reduce the error. The data has a visually significant exponential trend to it, so there was no surprise that the Holt-Winters Exponential Smoothing model gave the best results. Therefore, I moved forward utilizing only the Holt-Winters Exponential Smoothing model for the Test dataset and then continued on to predict the EV Charging station growth two years into the future. The final prediction produced a result of 37,968 new EV chargers to be produced and installed over the next two years. This seems reasonable considering in 2019 there were 15,400 produced and in 2020 there were 26,395 produced. Only time will tell how accurate the prediction will be.
 
 ## Conclusion:

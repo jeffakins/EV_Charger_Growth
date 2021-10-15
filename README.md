@@ -40,6 +40,9 @@ The following steps were taken to clean the data:
 - Converted date columns to pandas datetime type
 - Added a column for year that the charging station was opened
 - Converted all 'count' columns into 'int' type and filled nulls with 0
+- Replaced 'Public w/descriptor' with just 'Public' in group_access_code column
+- Replaced 'Private w/descriptor' with just 'Private' in group_access_code column
+- Dropped stations (rows) that are labeled as 'planned' and 'not yet accessible' in the group_access_code column
 
 Here is a summary of the data after I completed the cleaning process:
 

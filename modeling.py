@@ -4,35 +4,15 @@
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error
+from sklearn.linear_model import LinearRegression, LassoLars, TweedieRegressor
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.metrics import explained_variance_score
 from math import sqrt
 
-# ----- Functions --------------------------------------------------------------------------------------
-# Function to calculate RMSE:
-def rmse_evaluation(target_var):
-    '''
-    This function will take in the actual values in validate and the predicted values
-    and compute the mean_squared_error and then take the square root and round to 0 decimals. 
-    It will return the RMSE as an integer. 
-    '''
-    rmse = round(sqrt(mean_squared_error(validate[target_var], yhat_df[target_var])), 0)
-    return rmse
+# ----- TimeSeries Function(s) ----------------------------------------------------------------------------
 
-
-# Function to plot forcasts
-def plot_and_eval(target_var):
-    '''
-    a function to evaluate forecasts by computing the rmse and plot train and validate along with predictions
-    '''
-    plot_samples(target_var)
-    plt.plot(yhat_df[target_var])
-    plt.title(target_var)
-    rmse = evaluate(target_var)
-    print(target_var, '--RMSE: {:.0f}'.format(rmse))
-    plt.show()
-
-
-# ---------------------
-def append_eval_df(eval_df, model_type, target_var):
+# Function to create a dataframe for displaying time series results
+def append_eval_df(eval_df, model_type, target_var, actual, predict):
     '''
     This function will take in the model_type as a string for the name of the model, 
     the target variable as a string, 
@@ -41,13 +21,16 @@ def append_eval_df(eval_df, model_type, target_var):
     It will return the new dataframe. 
     '''
     if eval_df.size == 0:
-        eval_df = pd.DataFrame(columns = ['model_type', 'target_var', 'rmse'])
-        rmse = evaluate(target_var)
-        d = {'model_type': [model_type], 'target_var': [target_var], 'rmse': [rmse]}
+        eval_df = pd.DataFrame(columns = ['Model Type', 'Target Variable', 'RMSE'])
+        rmse = round(sqrt(mean_squared_error(actual, predict)), 0)
+        d = {'Model Type': [model_type], 'Target Variable': [target_var], 'RMSE': [rmse]}
         d = pd.DataFrame(d)
         return eval_df.append(d, ignore_index=True)
     else:
-        rmse = evaluate(target_var)
-        d = {'model_type': [model_type], 'target_var': [target_var], 'rmse': [rmse]}
+        rmse = round(sqrt(mean_squared_error(actual, predict)), 0)
+        d = {'Model Type': [model_type], 'Target Variable': [target_var], 'RMSE': [rmse]}
         d = pd.DataFrame(d)
         return eval_df.append(d, ignore_index=True)
+
+
+

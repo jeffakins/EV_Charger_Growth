@@ -5,7 +5,7 @@
 By Jeff Akins
 
 ## Project Goal: 
-The goal of this project is to examine the current state of the EV charging network within the United States and to project the growth of the EV charging network through 2023. 
+The goal of this project was to examine the current state of the EV charging network within the United States and to project the growth of the EV charging network through 2023. 
 
 ## Executive Summary:
 Based on the past rate of adding new EV charging stations within the US, and utilizing the Holt-Winters Exponential Smoothing Model, I forecasted that approximately 37,968 new EV chargers will be added to the US network over the next two years.

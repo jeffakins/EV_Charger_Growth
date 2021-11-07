@@ -11,7 +11,7 @@ The goal of this project was to examine the current state of the EV charging net
 Based on the past rate of adding new EV charging stations within the US, and utilizing the Holt-Winters Exponential Smoothing Model, I forecasted that approximately 37,968 new EV chargers will be added to the US network over the next two years.
 
 ### Dashboard:
-I am working on a visual dashboard for this project. You can see the progress [here](https://public.tableau.com/app/profile/jeff.akins/viz/StateofEVChargersInfrastructurewithintheUS/EVChargerMapPlot).
+I built a visual dashboard for this project, which you can find [here](https://public.tableau.com/app/profile/jeff.akins/viz/StateofEVChargersInfrastructurewithintheUS/EVChargerMapPlot).
 
 ### How to Reproduce:
 - You will need a copy of the 'alternative fuel stations 2021 csv' file, which can be downloaded from data.gov [here](https://catalog.data.gov/dataset/alternative-fueling-station-locations-422f2/resource/341957d8-daf6-4a38-ab1d-8ec1bc21cfb9)

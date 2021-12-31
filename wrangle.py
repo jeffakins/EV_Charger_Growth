@@ -24,7 +24,6 @@ def clean_ev(csv_file_name):
 
     # Update cost of charging to free or cost:
     ev_21['EV Pricing'] = ev_21['EV Pricing'].apply(lambda x: 'Free' if (x == 'FREE') | (x == 'Free') else 'Cost')
-    ev_21['EV Pricing'].value_counts()
 
     # Fill EV connector types nulls with the most common connector type:
     ev_21['EV Connector Types'] = ev_21['EV Connector Types'].fillna(value='J1772')

@@ -12,9 +12,10 @@ def clean_ev(csv_file_name):
     ev_21 = pd.read_csv(csv_file_name)     # Import csv file 
         
     ev_21 = ev_21[ev_21['Fuel Type Code'] == 'ELEC']    # To keep only EV stations
-        
-    ev_21 = ev_21.dropna(axis=1, thresh=1000)   # Drop columns that mostly have nulls
-                                                # Thresh of 1000 was chosen because I wanted to keep the 'EV Level1 EVSE Num' column
+
+    # Drop columns that mostly have nulls
+    # Thresh of 1000 was chosen because I wanted to keep the 'EV Level1 EVSE Num' column
+    ev_21 = ev_21.dropna(axis=1, thresh=1000)   
 
     # Additional columns to drop:
     columns_to_drop = ['Intersection Directions', 'Station Phone', 'Status Code', 'Access Days Time', 
